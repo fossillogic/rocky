@@ -1,6 +1,6 @@
-# **Fossil Project**
+# **Rocky Tides the Rock, Paper, Scissors Game**
 
-This project template serves as a starting point for creating classic executable projects that can be published as applications on Docker or even via GitHub. It includes the necessary setup, compilation, installation, and running instructions to get your project up and running quickly.
+**Rocky Tides** is a thrilling multiplayer Rock, Paper, Scissors game designed to test your reflexes and strategy on the turbulent shores of competition. With up to four players, each choice—Rock, Paper, or Scissors—carries the weight of the tides, as the game’s outcome will determine who stands victorious or gets swept away by the waves of defeat. Whether you're battling one-on-one or in a free-for-all, **Rocky Tides** offers a fun and fast-paced challenge for friends and rivals alike. Dive into the stormy waters, make your choice, and let the tides of fate decide your destiny!
 
 ## **Prerequisites**
 
@@ -18,8 +18,8 @@ Ensure you have the following installed before starting:
 1. **Clone the Repository**:
 
     ```sh
-    git clone https://github.com/fossillogic/fossil-app.git
-    cd fossil-app
+    git clone https://github.com/fossillogic/rocky.git
+    cd rocky
     ```
 
 2. **Configure the Build**:
@@ -43,16 +43,16 @@ Ensure you have the following installed before starting:
 5. **Run the Project**:
 
     ```sh
-    <exe name>
+    rocky
     ```
 
 ## **Contributing**
 
-Interested in contributing? Please open pull requests or create issues on the [GitHub repository](https://github.com/fossillogic/fossil-app).
+Interested in contributing? Please open pull requests or create issues on the [GitHub repository](https://github.com/fossillogic/rocky).
 
 ## **Feedback and Support**
 
-For issues, questions, or feedback, open an issue on the [GitHub repository](https://github.com/fossillogic/fossil-app/issues).
+For issues, questions, or feedback, open an issue on the [GitHub repository](https://github.com/fossillogic/rocky/issues).
 
 ## **License**
 
