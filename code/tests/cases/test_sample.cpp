@@ -63,5 +63,5 @@ FOSSIL_TEST_GROUP(cpp_sample_tests) {
     FOSSIL_TEST_ADD(cpp_sample_suite, cpp_test_app_name);
     FOSSIL_TEST_ADD(cpp_sample_suite, cpp_test_app_version);
 
-    FOSSIL_TEST_REGISTER(c_sample_suite);
+    FOSSIL_TEST_REGISTER(cpp_sample_suite);
 }
