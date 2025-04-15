@@ -12,4 +12,4 @@ app_dep = declare_dependency(
     include_directories: dir)
 
 # This is the main executable for the app
-executable('app', 'main.cpp', install: true, dependencies: [app_dep], include_directories: dir)
+executable('rocky', 'main.cpp', install: true, dependencies: [app_dep], include_directories: dir)
