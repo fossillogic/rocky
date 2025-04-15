@@ -2,6 +2,6 @@ project('Rocky Tides', 'cpp',
     meson_version: '>=1.3.0',
     license: 'MPL-2.0',
     version: '0.1.0',
-    default_options: [''cpp_std=c++20'])
+    default_options: ['cpp_std=c++20'])
 
 subdir('code')
