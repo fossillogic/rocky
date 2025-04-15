@@ -1,7 +1,7 @@
 if get_option('with_test').enabled()
     run_command(['python3', 'tools' / 'generate-runner.py'], check: true)
 
-    test_cpp   = ['unit_runner.cpp']
+    test_cpp   = ['unit_runner.c']
     test_cases = ['sample']
 
     foreach cases : test_cases
