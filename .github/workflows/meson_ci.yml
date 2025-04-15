@@ -3,14 +3,14 @@ name: Meson CI
 on:
   push:
     paths:
-      - "**.c"
-      - "**.h"
+      - "**.cpp"
+      - "**.hpp"
       - "**.build"
       - "**.options"
   pull_request:
     paths:
-      - "**.c"
-      - "**.h"
+      - "**.cpp"
+      - "**.hpp"
       - "**.build"
       - "**.options"
 
