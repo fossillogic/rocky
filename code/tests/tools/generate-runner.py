@@ -23,63 +23,51 @@ class TestRunnerGenerator:
 
         return list(test_groups)
 
-
-def generate_c_runner(self, test_groups):
-    # Prepare header content for the test runner
-    header = """
+    def generate_c_runner(self, test_groups):
+        # Prepare header content for the test runner
+        header = """
 // Generated Fossil Logic Test Runner
 #include <fossil/test/framework.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * *
 // * Fossil Logic Test List
 // * * * * * * * * * * * * * * * * * * * * * * * *
 """
 
-    # Declare test group externs
-    extern_test_groups = "\n".join(
-        [f"FOSSIL_TEST_EXPORT({group});" for group in test_groups]
-    )
+        # Declare test group externs
+        extern_test_groups = "\n".join(
+            [f"FOSSIL_TEST_EXPORT({group});" for group in test_groups]
+        )
 
-    # Close extern "C" block
-    extern_c_close = """
-#ifdef __cplusplus
-}
-#endif
-"""
-
-    # Prepare runner content
-    runner = """\n
+        # Prepare runner content
+        runner = """\n
 // * * * * * * * * * * * * * * * * * * * * * * * *
 // * Fossil Logic Test Runner
 // * * * * * * * * * * * * * * * * * * * * * * * *
 int main(int argc, char **argv) {
     FOSSIL_TEST_START(argc, argv);\n"""
 
-    # Import test groups in the main function
-    import_test_groups = "\n".join(
-        [f"    FOSSIL_TEST_IMPORT({group});" for group in test_groups]
-    )
+        # Import test groups in the main function
+        import_test_groups = "\n".join(
+            [f"    FOSSIL_TEST_IMPORT({group});" for group in test_groups]
+        )
 
-    # Complete with footer
-    footer = """\n
+        # Complete with footer
+        footer = """\n
     FOSSIL_TEST_RUN();
     FOSSIL_TEST_SUMMARY();
     FOSSIL_TEST_END();
 } // end of main
 """
 
-    # Write the generated test runner to 'unit_runner.cpp'
-    with open("unit_runner.cpp", "w") as file:
-        file.write(header)
-        file.write(extern_test_groups)
-        file.write(extern_c_close)
-        file.write(runner)
-        file.write(import_test_groups)
-        file.write(footer)
+        # Write the generated test runner to 'unit_runner.c'
+        with open("unit_runner.c", "w") as file:
+            file.write(header)
+            file.write(extern_test_groups)
+            file.write(runner)
+            file.write(import_test_groups)
+            file.write(footer)
+
 
 # Instantiate the generator, find test groups, and generate the test runner
 generator = TestRunnerGenerator()
